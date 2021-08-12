@@ -1,6 +1,21 @@
-# Interactive Brokers Gateway in Docker ![Build Status](https://github.com/dvasdekis/ib-gateway-docker-gcp/workflows/Test%20and%20Publish/badge.svg "Build Status")
+# Interactive Brokers Gateway in Docker ![Build Status](https://github.com/linxichen/ib-gateway-docker-gcp/workflows/Test%20and%20Publish/badge.svg "Build Status")
 
-This repo takes mvberg's work and optimises it (targeting a e2-small instance on GCP):
+This repo takes mvberg's work and dvasdekis's optimization and makes minor improvements to make it work better for non GCP users. 
+
+### Quick Start
+
+First of all you need to put IB username and password in the environment like
+
+``` sh
+export TWS_USER_ID=XXX; export TWS_PASSWORD=XXX; export TWS_TRADING_MODE=YYY;export TWS_TIMEZONE=America/New_York
+```
+
+Run the corresponding yml file (live for example)
+``` sh
+docker-compose -f docker-compose-live.yml
+```
+
+# dvasdekis's original README content:
 
 * Replaces IB Controller with IBC
 * Ubuntu 20.04 (Default of 16.04 isn't docker optimised)
@@ -16,7 +31,7 @@ Despite being optimised for GCP, this still works nicely in a local Docker insta
 
 ### Docker Hub image
 
-* [dvasdekis/ib-gateway-docker](https://hub.docker.com/r/dvasdekis/ib-gateway-docker)
+* [xhkm/ib-gateway-docker](https://hub.docker.com/r/xhkm/ib-gateway-docker)
 
 ### Getting Started
 
