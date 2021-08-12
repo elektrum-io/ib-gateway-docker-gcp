@@ -1,10 +1,10 @@
 FROM ubuntu:20.04
 
-LABEL maintainer="Dimitri Vasdekis <dvasdekis@gmail.com>"
+LABEL maintainer="Linxi Chen <linxichen88@gmail.com>"
 
 # Set Env vars
 ENV DEBIAN_FRONTEND=noninteractive
-ENV TZ=America/Chicago
+ENV TZ=America/New_York
 ENV TWS_MAJOR_VRSN=978
 ENV IBC_VERSION=3.8.2
 ENV IBC_INI=/root/IBController/IBController.ini
