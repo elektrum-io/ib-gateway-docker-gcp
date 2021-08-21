@@ -7,7 +7,7 @@ services:
       - ./ib/IBController.ini:/root/IBController/IBController.ini
       - ./ib/jts.ini:/root/Jts/jts.ini
     environment:
-      - TRADING_MODE=${TWS_TRADING_MODE}
+      - TRADING_MODE=live
       - TWSUSERID=${TWS_USER_ID}
       - TWSPASSWORD=${TWS_PASSWORD}
       - FIXUSERID=
