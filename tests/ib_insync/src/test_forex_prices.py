@@ -4,11 +4,11 @@ import ib_insync
 import sys
 import random
 
-loglevel = 10 # Set module-wide loglevel here
+loglevel = 20 # Set module-wide loglevel here
 
 """ Begin setting module-wide parameters"""
 # Log for ib_insync
-ib_insync.util.logToConsole(level=10)
+ib_insync.util.logToConsole(level=loglevel)
 # Initialise Logging class
 logging.basicConfig()
 logging.getLogger().setLevel(loglevel)
@@ -93,7 +93,6 @@ def start_ticker_feed(contracts, ib_conn):
 
 
 def main():
-    ib_insync.util.sleep(90)
     ib_conn = connect_to_ib()
     logging.info("test_forex_prices connected to IB")
     contracts = get_forex_pairs(ib_conn)
