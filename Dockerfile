@@ -52,9 +52,9 @@ COPY ./ibgateway.vmoptions /root/Jts/ibgateway/978/ibgateway.vmoptions
 RUN pip3 install supervisor ib_insync
 
 # Copy test file for health check
-COPY ./tests/ib_insync/src/test_forex_prices.py /tmp/src/test_forex_prices.py
-HEALTHCHECK --interval=5m --timeout=5m --start-period=45s \
-  CMD python3 /tmp/src/test_forex_prices.py
+# COPY ./tests/ib_insync/src/test_forex_prices.py /tmp/src/test_forex_prices.py
+# HEALTHCHECK --interval=5m --timeout=5m --start-period=45s \
+#   CMD python3 /tmp/src/test_forex_prices.py
 
 COPY ./restart-docker-vm.py /root/restart-docker-vm.py
 
